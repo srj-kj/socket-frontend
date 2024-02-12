@@ -26,7 +26,7 @@ console.log(socket);
     e.preventDefault();
     try {
       axios
-        .post('https://socket-lyco.onrender.com/api/login', { email, password })
+        .post('https://logincheckback.onrender.com/api/login', { email, password })
         .then(() => {
           dispatch(login());
           socket.emit('login_successful', email)

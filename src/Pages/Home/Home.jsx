@@ -13,7 +13,7 @@ const Home = () => {
 
   const handleSignout = (e) => {
     e.preventDefault();
-    axios.get('https://socket-lyco.onrender.com/api/logout')
+    axios.get('https://logincheckback.onrender.com/api/logout')
     dispatch(logout());
 
     navigate('/login')
