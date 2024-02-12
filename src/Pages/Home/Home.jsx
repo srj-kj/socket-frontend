@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
-import TimerApp from '../../components/Timer';
 import { logout } from '../../Redux/User';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { connectSocket, socket } from '../../utils/socket';
 
 
@@ -13,7 +13,9 @@ const Home = () => {
 
   const handleSignout = (e) => {
     e.preventDefault();
+    axios.get('https://socket-lyco.onrender.com/api/logout')
     dispatch(logout());
+
     navigate('/login')
   }
   useEffect(() => {

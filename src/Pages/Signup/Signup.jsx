@@ -16,7 +16,7 @@ function SignupForm() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      axios.post('http://localhost:3000/api/signup', { email , password}).then(() => {
+      axios.post('https://socket-lyco.onrender.com/api/signup', { email , password}).then(() => {
         navigate('/login');
     })
   
